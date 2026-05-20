@@ -6,327 +6,327 @@
 <meta name="description" content="Ibrahim Sidat — Data Analyst | SQL · Excel · Power BI | Navsari, Gujarat">
 <title>Ibrahim Sidat · Data Analyst</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+/* ── RESET ── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#f8f9fb;
+  --blue:#2563eb;
+  --blue-lt:#eff6ff;
+  --blue-mid:#dbeafe;
+  --ink:#111827;
+  --ink2:#374151;
+  --muted:#6b7280;
+  --muted2:#9ca3af;
+  --bg:#f9fafb;
   --white:#ffffff;
-  --ink:#0a0f1e;
-  --ink2:#1a2235;
-  --teal:#0d9488;
-  --teal2:#14b8a6;
-  --teal3:#ccfbf1;
-  --teal4:#f0fdfa;
-  --muted:#64748b;
-  --muted2:#94a3b8;
-  --border:#e2e8f0;
-  --border2:rgba(13,148,136,0.18);
-  --shadow:0 1px 3px rgba(0,0,0,0.06),0 4px 16px rgba(0,0,0,0.06);
-  --shadow-md:0 4px 24px rgba(0,0,0,0.1);
-  --shadow-lg:0 12px 48px rgba(0,0,0,0.12);
-  --r:14px;
-  --r2:22px;
-  --max:1200px;
+  --border:#e5e7eb;
+  --border2:#d1d5db;
+  --green:#16a34a;
+  --green-bg:#dcfce7;
+  --shadow-sm:0 1px 2px rgba(0,0,0,0.05);
+  --shadow:0 1px 3px rgba(0,0,0,0.07),0 4px 12px rgba(0,0,0,0.06);
+  --shadow-md:0 4px 20px rgba(0,0,0,0.09);
+  --max:1120px;
 }
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--teal);border-radius:4px}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--blue);border-radius:4px}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
 
-/* ── NAV ── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(248,249,251,0.88);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-.nav.stuck{border-color:var(--border);background:rgba(255,255,255,0.95)}
-.nav-inner{max-width:var(--max);margin:0 auto;padding:0 clamp(16px,4vw,40px);height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
-.nav-avatar{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--teal),var(--teal2));display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:0.85rem;font-weight:900;color:#fff;flex-shrink:0}
-.nav-name{font-weight:700;font-size:0.9rem;color:var(--ink);letter-spacing:-0.01em}
-.nav-name span{display:block;font-size:0.65rem;font-weight:400;color:var(--muted);letter-spacing:0.02em}
-.nav-links{display:flex;align-items:center;list-style:none;gap:2px}
-.nav-links a{font-size:0.8rem;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:8px;transition:all .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--ink);background:#f1f5f9}
-.nav-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.btn-teal{display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:#fff;padding:9px 20px;border-radius:50px;font-weight:600;font-size:0.8rem;text-decoration:none;transition:all .22s;white-space:nowrap}
-.btn-teal:hover{background:var(--teal2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(13,148,136,.3)}
-.btn-wa-sm{display:inline-flex;align-items:center;gap:7px;background:#25D366;color:#fff;padding:9px 16px;border-radius:50px;font-weight:600;font-size:0.8rem;text-decoration:none;transition:all .22s;white-space:nowrap}
-.btn-wa-sm:hover{background:#1da851;transform:translateY(-1px)}
-.ham{display:none;background:none;border:1px solid var(--border);border-radius:8px;padding:8px 10px;cursor:pointer;flex-direction:column;gap:4px}
-.ham span{display:block;width:18px;height:1.5px;background:var(--ink);border-radius:2px;transition:.3s}
+/* ── NAVBAR ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:60px;background:rgba(249,250,251,0.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .25s}
+.nav.on{border-color:var(--border)}
+.nav-wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(16px,3vw,32px);height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.nav-logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:.9rem;color:var(--ink);white-space:nowrap}
+.nav-dot{width:32px;height:32px;border-radius:8px;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.75rem;font-weight:800;flex-shrink:0}
+.nav-ul{display:flex;list-style:none;gap:0}
+.nav-ul a{font-size:.8rem;font-weight:500;color:var(--muted);padding:6px 11px;border-radius:6px;transition:all .18s}
+.nav-ul a:hover,.nav-ul a.active{color:var(--ink);background:#f3f4f6}
+.nav-r{display:flex;gap:7px;align-items:center;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:7px;font-size:.78rem;font-weight:600;transition:all .18s;white-space:nowrap;font-family:'Inter',sans-serif;border:none;cursor:pointer;text-decoration:none}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:#1d4ed8}
+.btn-wa{background:#25d366;color:#fff}
+.btn-wa:hover{background:#16a34a}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--border2)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-sm{padding:6px 13px;font-size:.74rem}
+.ham-btn{display:none;background:none;border:1.5px solid var(--border2);border-radius:7px;padding:7px 9px;cursor:pointer;flex-direction:column;gap:4px;flex-shrink:0}
+.ham-btn span{display:block;width:17px;height:1.5px;background:var(--ink);border-radius:2px;transition:.25s}
 
-/* MOBILE OVERLAY */
-.mob-overlay{display:none;position:fixed;inset:0;background:rgba(255,255,255,.97);z-index:800;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:80px 32px 40px}
-.mob-overlay.open{display:flex}
-.mob-overlay a{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;color:var(--muted);text-decoration:none;padding:16px 0;border-bottom:1px solid var(--border);width:100%;text-align:center;transition:color .2s}
-.mob-overlay a:hover{color:var(--teal)}
-.mob-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+/* MOBILE MENU */
+.mob{display:none;position:fixed;inset:0;background:#fff;z-index:998;flex-direction:column;padding:72px 24px 32px;overflow-y:auto}
+.mob.on{display:flex}
+.mob a{font-size:1.15rem;font-weight:600;color:var(--ink);padding:15px 0;border-bottom:1px solid var(--border)}
+.mob a:hover{color:var(--blue)}
+.mob-btns{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
 
 /* ── HERO ── */
-#hero{min-height:100svh;display:flex;align-items:center;padding:80px clamp(16px,4vw,40px) clamp(48px,8vh,80px);position:relative;overflow:hidden}
-.hero-bg-blob{position:absolute;top:-10%;right:-5%;width:min(600px,80vw);height:min(600px,80vw);border-radius:50%;background:radial-gradient(circle,rgba(13,148,136,.07) 0%,transparent 70%);pointer-events:none}
-.hero-bg-blob2{position:absolute;bottom:-20%;left:-10%;width:min(400px,60vw);height:min(400px,60vw);border-radius:50%;background:radial-gradient(circle,rgba(13,148,136,.05) 0%,transparent 70%);pointer-events:none}
-.hero-inner{max-width:var(--max);margin:0 auto;width:100%;display:grid;grid-template-columns:1fr min(420px,42%);gap:clamp(40px,6vw,80px);align-items:center;position:relative;z-index:2}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--teal4);border:1px solid var(--border2);border-radius:50px;padding:6px 14px;font-size:0.72rem;font-weight:600;color:var(--teal);margin-bottom:clamp(16px,2.5vh,24px);animation:fu .6s ease both}
-.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 2px rgba(34,197,94,.25);flex-shrink:0;animation:bpulse 2s infinite}
-@keyframes bpulse{0%,100%{box-shadow:0 0 0 2px rgba(34,197,94,.25)}50%{box-shadow:0 0 0 5px rgba(34,197,94,.08)}}
-.hero-h{font-family:'Fraunces',serif;font-size:clamp(3rem,7vw,6.5rem);line-height:.95;font-weight:900;letter-spacing:-0.04em;margin-bottom:clamp(18px,3vh,28px);animation:fu .65s .08s ease both}
-.hero-h .teal{color:var(--teal)}
-.hero-h .italic{font-style:italic}
-.hero-sub{font-size:clamp(.85rem,1.5vw,.98rem);color:var(--muted);line-height:1.8;max-width:480px;margin-bottom:clamp(24px,4vh,36px);animation:fu .65s .16s ease both}
-.hero-sub strong{color:var(--ink);font-weight:600}
-.hero-btns{display:flex;gap:10px;flex-wrap:wrap;animation:fu .65s .22s ease both}
-.btn-outline-teal{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--teal);border:1.5px solid var(--border2);padding:10px 22px;border-radius:50px;font-weight:600;font-size:0.82rem;text-decoration:none;transition:all .22s;white-space:nowrap}
-.btn-outline-teal:hover{background:var(--teal4);border-color:var(--teal)}
-.btn-wa-hero{display:inline-flex;align-items:center;gap:7px;background:#25D366;color:#fff;padding:11px 24px;border-radius:50px;font-weight:700;font-size:0.82rem;text-decoration:none;transition:all .22s;white-space:nowrap}
-.btn-wa-hero:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.25)}
-.hero-stats{display:flex;gap:clamp(20px,3vw,40px);margin-top:clamp(32px,5vh,52px);padding-top:clamp(20px,3vh,32px);border-top:1px solid var(--border);animation:fu .65s .28s ease both;flex-wrap:wrap}
-.hstat-n{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:var(--teal);line-height:1;letter-spacing:-0.03em}
-.hstat-l{font-size:.7rem;color:var(--muted);font-weight:500;margin-top:3px}
-.hero-img-side{position:relative;animation:fu .65s .1s ease both}
-.hero-img-card{border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(145deg,#e2f8f5,#ccfbf1);border:1px solid var(--border2);box-shadow:var(--shadow-lg)}
-.hero-img-card img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .5s}
-.hero-img-card:hover img{transform:scale(1.03)}
-.hero-img-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:5rem;font-weight:900;color:rgba(13,148,136,.15)}
-.hero-float-badge{position:absolute;bottom:-14px;left:-14px;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:12px;border:1px solid var(--border)}
-.hfb-icon{width:38px;height:38px;border-radius:10px;background:var(--teal4);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:.95rem;flex-shrink:0}
-.hfb-num{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:900;color:var(--ink);line-height:1}
-.hfb-label{font-size:.65rem;color:var(--muted);font-weight:500;margin-top:2px}
-@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+#hero{padding:calc(60px + clamp(36px,7vh,72px)) clamp(16px,3vw,32px) clamp(40px,7vh,72px);max-width:var(--max);margin:0 auto}
+.hero-grid{display:grid;grid-template-columns:1fr min(400px,42%);gap:clamp(32px,5vw,72px);align-items:center}
+.hero-available{display:inline-flex;align-items:center;gap:7px;background:var(--green-bg);border:1px solid rgba(22,163,74,.2);border-radius:6px;padding:5px 12px;font-size:.72rem;font-weight:600;color:var(--green);margin-bottom:18px}
+.hero-available i{font-size:.5rem;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1.hero-h{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-0.025em;color:var(--ink);margin-bottom:16px}
+h1.hero-h span{color:var(--blue)}
+.hero-tagline{font-size:clamp(.88rem,1.5vw,1.02rem);color:var(--muted);line-height:1.75;margin-bottom:24px;max-width:460px}
+.hero-tagline strong{color:var(--ink);font-weight:600}
+.hero-btns{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:32px}
+.hero-divider{border:none;border-top:1px solid var(--border);margin-bottom:24px}
+.hero-meta{display:flex;gap:clamp(18px,3vw,36px);flex-wrap:wrap}
+.hero-meta-item{}
+.hero-meta-num{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--blue);line-height:1;letter-spacing:-0.02em}
+.hero-meta-label{font-size:.7rem;color:var(--muted);font-weight:500;margin-top:2px}
+.hero-photo-col{position:relative}
+.hero-photo{border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:#e0e7ff;border:1px solid var(--border)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.hero-photo-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;font-weight:800;color:rgba(37,99,235,.15)}
+.hero-card{position:absolute;bottom:-12px;left:-12px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow)}
+.hero-card-icon{width:34px;height:34px;background:var(--blue-lt);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:.85rem;flex-shrink:0}
+.hero-card-num{font-size:1.2rem;font-weight:800;color:var(--ink);line-height:1}
+.hero-card-label{font-size:.62rem;color:var(--muted);margin-top:1px}
 
 /* ── SECTION ── */
-.sec{padding:clamp(56px,8vh,100px) clamp(16px,4vw,40px);position:relative;z-index:2}
-.sec-inner{max-width:var(--max);margin:0 auto}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
-.eyebrow::before{content:'';width:20px;height:2px;background:var(--teal);border-radius:2px;flex-shrink:0}
-.sec-h{font-family:'Fraunces',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:900;letter-spacing:-0.03em;line-height:1.05;margin-bottom:clamp(36px,5vh,56px);color:var(--ink)}
-.sec-h .teal{color:var(--teal)}
-.sec-h em{font-style:italic}
+section:not(#hero){padding:clamp(48px,7vh,88px) clamp(16px,3vw,32px)}
+.sec-wrap{max-width:var(--max);margin:0 auto}
+.sec-label{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+h2.sec-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-0.02em;color:var(--ink);margin-bottom:clamp(28px,4vh,48px);line-height:1.15}
 
 /* ── ABOUT ── */
-#about{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:min(360px,42%) 1fr;gap:clamp(36px,6vw,72px);align-items:start}
-.about-photo{border-radius:var(--r2);overflow:hidden;aspect-ratio:3/4;background:linear-gradient(145deg,var(--teal3),#e0f2fe);border:1px solid var(--border);box-shadow:var(--shadow);position:relative}
-.about-photo img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
-.about-photo-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:5rem;font-weight:900;color:rgba(13,148,136,.12)}
-.about-tag{position:absolute;bottom:16px;left:16px;background:var(--teal);color:#fff;border-radius:8px;padding:6px 13px;font-size:.65rem;font-weight:700;letter-spacing:.04em}
-.about-txt p{font-size:clamp(.84rem,1.5vw,.95rem);color:var(--muted);line-height:1.85;margin-bottom:15px}
-.about-txt strong{color:var(--ink);font-weight:600}
-.about-chips{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0}
-.achip{background:var(--teal4);border:1px solid var(--border2);color:var(--teal);border-radius:50px;padding:5px 13px;font-size:.7rem;font-weight:600;transition:all .2s}
-.achip:hover{background:var(--teal);color:#fff}
-.role-list{border-top:1px solid var(--border)}
-.role-row{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--border);transition:all .2s}
-.role-row:hover .role-name{color:var(--teal)}
-.role-name{font-size:.85rem;font-weight:600;color:var(--ink);transition:color .2s}
-.role-pill{background:var(--teal4);border:1px solid var(--border2);color:var(--teal);border-radius:50px;padding:3px 11px;font-size:.62rem;font-weight:700}
+#about{background:#fff}
+.about-grid{display:grid;grid-template-columns:min(300px,38%) 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.about-photo-wrap{border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:#f0f4ff;border:1px solid var(--border)}
+.about-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:top}
+.about-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;font-weight:800;color:rgba(37,99,235,.1)}
+.about-location{font-size:.72rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:5px;margin-bottom:10px}
+.about-bio p{font-size:clamp(.84rem,1.4vw,.94rem);color:var(--ink2);line-height:1.8;margin-bottom:13px}
+.about-bio strong{color:var(--ink);font-weight:600}
+.about-chips{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0}
+.achip{background:var(--blue-lt);color:var(--blue);border-radius:6px;padding:4px 11px;font-size:.7rem;font-weight:600;border:1px solid var(--blue-mid)}
+.open-table{width:100%;border-collapse:collapse;margin-top:4px}
+.open-table tr{border-top:1px solid var(--border)}
+.open-table tr:last-child{border-bottom:1px solid var(--border)}
+.open-table td{padding:10px 0;font-size:.84rem}
+.td-role{font-weight:600;color:var(--ink)}
+.td-badge{text-align:right}
+.badge-open{background:var(--green-bg);color:var(--green);border-radius:5px;padding:3px 10px;font-size:.62rem;font-weight:700}
 
 /* ── SKILLS ── */
 #skills{background:var(--bg)}
-.skills-head{display:grid;grid-template-columns:1fr min(400px,40%);gap:clamp(20px,4vw,48px);align-items:end;margin-bottom:clamp(36px,5vh,52px)}
-.skills-sub{font-size:clamp(.82rem,1.4vw,.92rem);color:var(--muted);line-height:1.8}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
-.sk-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:clamp(20px,3vw,28px);transition:all .25s;position:relative;overflow:hidden;cursor:default}
-.sk-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--teal2));transform:scaleX(0);transform-origin:left;transition:transform .28s}
-.sk-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:var(--border2)}
-.sk-card:hover::after{transform:scaleX(1)}
-.sk-num{font-size:.6rem;font-weight:700;color:var(--muted2);letter-spacing:.08em;margin-bottom:12px}
-.sk-icon{width:44px;height:44px;border-radius:11px;background:var(--teal4);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1.1rem;margin-bottom:14px;transition:all .25s}
-.sk-card:hover .sk-icon{background:var(--teal);color:#fff}
-.sk-name{font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:6px}
-.sk-desc{font-size:.76rem;color:var(--muted);line-height:1.65}
+.skills-intro-row{display:grid;grid-template-columns:1fr min(380px,40%);gap:clamp(20px,4vw,48px);align-items:end;margin-bottom:clamp(28px,4vh,44px)}
+.skills-intro-sub{font-size:clamp(.82rem,1.4vw,.92rem);color:var(--muted);line-height:1.75}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:12px}
+.sk{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:clamp(18px,2.5vw,24px);transition:border-color .2s,box-shadow .2s}
+.sk:hover{border-color:var(--blue);box-shadow:var(--shadow)}
+.sk-num{font-size:.6rem;font-weight:700;color:var(--muted2);letter-spacing:.08em;margin-bottom:10px}
+.sk-icon{width:38px;height:38px;border-radius:9px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1rem;margin-bottom:12px;transition:background .2s}
+.sk:hover .sk-icon{background:var(--blue);color:#fff}
+.sk-name{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:5px}
+.sk-desc{font-size:.74rem;color:var(--muted);line-height:1.6}
 
 /* ── EXPERIENCE ── */
-#experience{background:var(--white)}
-.exp-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r2);padding:clamp(24px,4vw,40px);position:relative;overflow:hidden;border-left:4px solid var(--teal);transition:box-shadow .3s}
+#experience{background:#fff}
+.exp-card{background:var(--bg);border:1.5px solid var(--border);border-radius:14px;padding:clamp(22px,3.5vw,36px);border-left:4px solid var(--blue);transition:box-shadow .2s}
 .exp-card:hover{box-shadow:var(--shadow-md)}
-.exp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:10px}
-.exp-title{font-family:'Fraunces',serif;font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;line-height:1.1;color:var(--ink)}
-.exp-live{display:inline-flex;align-items:center;gap:6px;background:#dcfce7;border:1px solid rgba(34,197,94,.25);color:#16a34a;border-radius:50px;padding:5px 13px;font-size:.63rem;font-weight:700;letter-spacing:.06em;white-space:nowrap}
-.exp-live::before{content:'';width:5px;height:5px;border-radius:50%;background:#22c55e;animation:bpulse 1.8s infinite}
-.exp-co{font-weight:700;color:var(--teal);font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:13px}
-.exp-meta{display:flex;gap:clamp(10px,2vw,22px);flex-wrap:wrap;margin-bottom:16px}
-.exp-meta span{display:flex;align-items:center;gap:5px;font-size:.74rem;color:var(--muted)}
-.exp-meta i{color:var(--teal);font-size:.62rem}
-.exp-desc{font-size:clamp(.82rem,1.4vw,.9rem);color:var(--muted);line-height:1.85;margin-bottom:20px}
-.exp-tags{display:flex;gap:7px;flex-wrap:wrap}
-.etag{background:var(--teal4);border:1px solid var(--border2);border-radius:50px;padding:4px 13px;font-size:.7rem;font-weight:600;color:var(--teal)}
+.exp-card+.exp-card{margin-top:14px}
+.exp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.exp-title{font-size:clamp(1.1rem,2.5vw,1.4rem);font-weight:700;color:var(--ink)}
+.exp-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-bg);color:var(--green);border-radius:5px;padding:4px 10px;font-size:.63rem;font-weight:700;white-space:nowrap}
+.exp-badge i{font-size:.45rem;animation:pulse 1.8s infinite}
+.exp-company{font-weight:600;color:var(--blue);font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;margin-bottom:10px}
+.exp-meta{display:flex;gap:clamp(10px,2vw,20px);flex-wrap:wrap;margin-bottom:14px}
+.exp-meta span{display:flex;align-items:center;gap:5px;font-size:.73rem;color:var(--muted)}
+.exp-meta i{color:var(--blue);font-size:.6rem}
+.exp-desc{font-size:clamp(.82rem,1.4vw,.9rem);color:var(--ink2);line-height:1.8;margin-bottom:16px}
+.exp-bullets{margin:0 0 16px 0;padding-left:16px;display:flex;flex-direction:column;gap:6px}
+.exp-bullets li{font-size:clamp(.8rem,1.3vw,.87rem);color:var(--ink2);line-height:1.7}
+.exp-tags{display:flex;gap:6px;flex-wrap:wrap}
+.etag{background:var(--blue-lt);color:var(--blue);border-radius:5px;padding:3px 11px;font-size:.69rem;font-weight:600;border:1px solid var(--blue-mid)}
 
 /* ── PROJECTS ── */
 #projects{background:var(--bg)}
-.proj-header-row{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:18px;margin-bottom:clamp(32px,5vh,52px)}
-#proj-list{display:flex;flex-direction:column;gap:20px}
-.proj-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;display:grid;grid-template-columns:min(380px,44%) 1fr;transition:all .3s}
-.proj-card:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
-.proj-img-col{position:relative;overflow:hidden;min-height:280px}
-.proj-img-col img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s}
-.proj-card:hover .proj-img-col img{transform:scale(1.06)}
-.proj-img-col::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 55%,var(--white));pointer-events:none}
-.proj-info{padding:clamp(24px,3.5vw,40px);display:flex;flex-direction:column;justify-content:center}
-.proj-tag-label{display:inline-flex;align-items:center;gap:7px;font-size:.63rem;font-weight:700;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
-.proj-tag-label::before{content:'';width:14px;height:1.5px;background:var(--teal);flex-shrink:0}
-.proj-title{font-family:'Fraunces',serif;font-size:clamp(1.2rem,2.5vw,1.7rem);font-weight:700;line-height:1.2;color:var(--ink);margin-bottom:10px}
-.proj-desc{font-size:clamp(.76rem,1.3vw,.84rem);color:var(--muted);line-height:1.8;margin-bottom:18px}
-.proj-techs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
-.pt{background:var(--teal4);border:1px solid var(--border2);color:var(--teal);border-radius:50px;padding:3px 11px;font-size:.63rem;font-weight:700}
-.proj-links{display:flex;gap:10px;flex-wrap:wrap}
-.proj-link-btn{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--border);border-radius:50px;padding:7px 15px;font-size:.72rem;font-weight:600;color:var(--ink);text-decoration:none;transition:all .2s}
-.proj-link-btn:hover{border-color:var(--teal);color:var(--teal)}
-.proj-link-btn.github{background:var(--ink);color:#fff;border-color:var(--ink)}
-.proj-link-btn.github:hover{background:#1a2235;border-color:#1a2235}
+.proj-top-row{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:clamp(24px,4vh,40px)}
+#proj-list{display:flex;flex-direction:column;gap:14px}
+.proj-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:min(320px,40%) 1fr;transition:box-shadow .2s,border-color .2s}
+.proj-card:hover{box-shadow:var(--shadow-md);border-color:var(--blue)}
+.proj-img{overflow:hidden;min-height:240px;background:#f0f4ff}
+.proj-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.proj-card:hover .proj-img img{transform:scale(1.04)}
+.proj-info{padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;justify-content:center}
+.proj-label{font-size:.63rem;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.proj-label::before{content:'';width:14px;height:1.5px;background:var(--blue);flex-shrink:0}
+.proj-title{font-size:clamp(1.05rem,2vw,1.4rem);font-weight:700;color:var(--ink);margin-bottom:9px;line-height:1.25}
+.proj-desc{font-size:clamp(.78rem,1.3vw,.86rem);color:var(--muted);line-height:1.75;margin-bottom:16px}
+.proj-techs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:16px}
+.pt{background:var(--blue-lt);border:1px solid var(--blue-mid);color:var(--blue);border-radius:5px;padding:3px 9px;font-size:.63rem;font-weight:600}
+.proj-links{display:flex;gap:8px;flex-wrap:wrap}
+.plbtn{display:inline-flex;align-items:center;gap:5px;border:1.5px solid var(--border2);border-radius:6px;padding:6px 13px;font-size:.72rem;font-weight:600;color:var(--ink);transition:all .18s}
+.plbtn:hover{border-color:var(--blue);color:var(--blue)}
+.plbtn.gh{background:var(--ink);color:#fff;border-color:var(--ink)}
+.plbtn.gh:hover{background:#374151}
 
 /* ── CERTIFICATIONS ── */
-#certifications{background:var(--white)}
-#cert-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:18px}
-.cert-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;transition:all .3s}
-.cert-card:hover{box-shadow:var(--shadow-md);border-color:var(--border2);transform:translateY(-3px)}
-.cert-img{position:relative;height:200px;overflow:hidden}
-.cert-img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9);transition:transform .5s,filter .4s}
-.cert-card:hover .cert-img img{transform:scale(1.04);filter:saturate(1)}
-.cert-img-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 35%,var(--bg) 100%);pointer-events:none}
-.cert-badge-pill{position:absolute;top:12px;left:12px;background:var(--teal);color:#fff;border-radius:50px;padding:4px 12px;font-size:.6rem;font-weight:700;letter-spacing:.06em}
-.cert-body{padding:clamp(18px,2.5vw,26px)}
-.cert-issuer-row{display:flex;align-items:center;gap:7px;font-size:.62rem;font-weight:700;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
-.cert-issuer-row::before{content:'';width:12px;height:1.5px;background:var(--teal);flex-shrink:0}
-.cert-title-txt{font-size:clamp(.95rem,1.8vw,1.08rem);font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.35}
-.cert-desc-txt{font-size:.76rem;color:var(--muted);line-height:1.75;margin-bottom:14px}
-.cert-view-btn{display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:#fff;border-radius:50px;padding:8px 18px;font-size:.72rem;font-weight:600;text-decoration:none;transition:all .22s}
-.cert-view-btn:hover{background:var(--teal2);transform:translateY(-1px)}
-.cert-view-btn-none{display:inline-flex;align-items:center;gap:7px;background:var(--bg);color:var(--muted2);border:1px solid var(--border);border-radius:50px;padding:8px 18px;font-size:.72rem;font-weight:600;cursor:default}
+#certifications{background:#fff}
+#cert-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:16px}
+.cert-card{background:var(--bg);border:1.5px solid var(--border);border-radius:14px;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.cert-card:hover{box-shadow:var(--shadow-md);border-color:var(--blue)}
+.cert-img-wrap{background:#f0f4ff;border-bottom:1px solid var(--border);overflow:hidden}
+.cert-img-wrap img{width:100%;height:auto;display:block;transition:transform .4s}
+.cert-card:hover .cert-img-wrap img{transform:scale(1.02)}
+.cert-top-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#fff;border-bottom:1px solid var(--border)}
+.cert-issuer-badge{font-size:.62rem;font-weight:700;color:var(--blue);letter-spacing:.06em;text-transform:uppercase}
+.cert-verified{background:var(--green-bg);color:var(--green);border-radius:5px;padding:3px 9px;font-size:.6rem;font-weight:700}
+.cert-body{padding:clamp(16px,2.5vw,22px)}
+.cert-title-txt{font-size:clamp(.92rem,1.7vw,1.05rem);font-weight:700;color:var(--ink);margin-bottom:8px;line-height:1.3}
+.cert-desc-txt{font-size:.76rem;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.cert-link-btn{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;border-radius:6px;padding:7px 15px;font-size:.72rem;font-weight:600;transition:all .18s}
+.cert-link-btn:hover{background:#1d4ed8}
+.cert-no-link{display:inline-flex;align-items:center;gap:6px;background:var(--bg);color:var(--muted2);border:1px solid var(--border);border-radius:6px;padding:7px 15px;font-size:.72rem;font-weight:600}
 
 /* ── EDUCATION ── */
 #education{background:var(--bg)}
-.edu-layout{display:grid;grid-template-columns:1fr min(400px,42%);gap:clamp(28px,5vw,56px);align-items:start}
-.edu-main{background:linear-gradient(145deg,var(--teal),#0f766e);border-radius:var(--r2);padding:clamp(28px,4vw,44px);position:relative;overflow:hidden;color:#fff;box-shadow:0 20px 60px rgba(13,148,136,.25)}
-.edu-main::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.06);right:-50px;bottom:-50px;pointer-events:none}
-.edu-main::after{content:'';position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.04);left:-30px;top:-30px;pointer-events:none}
-.edu-yr-badge{display:inline-block;background:rgba(255,255,255,.18);color:#fff;border-radius:50px;padding:4px 16px;font-size:.65rem;font-weight:700;margin-bottom:20px;letter-spacing:.06em;position:relative;z-index:1}
-.edu-degree{font-family:'Fraunces',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:700;line-height:1.15;color:#fff;margin-bottom:10px;position:relative;z-index:1}
-.edu-school{font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:16px;position:relative;z-index:1;display:flex;gap:8px}
-.edu-school i{color:rgba(255,255,255,.5);margin-top:3px;flex-shrink:0}
-.edu-main p{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.8;position:relative;z-index:1}
-.edu-side{display:flex;flex-direction:column;gap:14px}
-.edu-fact{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:clamp(14px,2.5vw,20px);display:flex;align-items:center;gap:13px;transition:all .22s}
-.edu-fact:hover{border-color:var(--border2);transform:translateX(4px)}
-.ef-icon{width:40px;height:40px;border-radius:10px;background:var(--teal4);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:.9rem;flex-shrink:0}
-.ef-label{font-size:.58rem;font-weight:700;color:var(--muted2);letter-spacing:.07em;text-transform:uppercase}
-.ef-val{font-size:.85rem;font-weight:700;color:var(--ink);margin-top:2px}
-.edu-subj{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:clamp(14px,2.5vw,20px)}
-.edu-subj-label{font-size:.58rem;font-weight:700;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
-.subj-grid{display:flex;flex-wrap:wrap;gap:7px}
-.subj{background:var(--teal4);border:1px solid var(--border2);color:var(--teal);border-radius:50px;padding:4px 12px;font-size:.68rem;font-weight:500;transition:all .2s}
-.subj:hover{background:var(--teal);color:#fff}
+.edu-grid{display:grid;grid-template-columns:1fr min(380px,40%);gap:clamp(24px,4vw,52px);align-items:start}
+.edu-main{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:clamp(24px,3.5vw,40px);border-top:4px solid var(--blue)}
+.edu-yr{display:inline-block;background:var(--blue-lt);color:var(--blue);border-radius:5px;padding:4px 12px;font-size:.65rem;font-weight:700;margin-bottom:18px;letter-spacing:.04em}
+.edu-degree{font-size:clamp(1.15rem,2.5vw,1.6rem);font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.2}
+.edu-school{font-size:.8rem;color:var(--muted);line-height:1.65;margin-bottom:16px;display:flex;gap:7px;align-items:flex-start}
+.edu-school i{color:var(--blue);margin-top:3px;flex-shrink:0;font-size:.7rem}
+.edu-main p{font-size:.84rem;color:var(--ink2);line-height:1.75}
+.edu-facts{display:flex;flex-direction:column;gap:10px}
+.edu-fact{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:clamp(12px,2vw,18px);display:flex;align-items:center;gap:12px;transition:border-color .18s}
+.edu-fact:hover{border-color:var(--blue)}
+.ef-icon{width:36px;height:36px;border-radius:8px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:.85rem;flex-shrink:0}
+.ef-label{font-size:.6rem;font-weight:600;color:var(--muted2);text-transform:uppercase;letter-spacing:.06em}
+.ef-val{font-size:.84rem;font-weight:700;color:var(--ink);margin-top:2px}
+.edu-subj{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:clamp(14px,2vw,20px)}
+.edu-subj-label{font-size:.6rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.subj-chips{display:flex;flex-wrap:wrap;gap:6px}
+.subj-chip{background:var(--blue-lt);border:1px solid var(--blue-mid);color:var(--blue);border-radius:5px;padding:4px 10px;font-size:.68rem;font-weight:500}
 
 /* ── CONTACT ── */
-#contact{background:var(--white)}
-.contact-layout{display:grid;grid-template-columns:1fr min(420px,44%);gap:clamp(28px,5vw,64px);align-items:start}
-.contact-lead{font-size:clamp(.84rem,1.5vw,.96rem);color:var(--muted);line-height:1.85;margin-bottom:28px}
-.c-list{display:flex;flex-direction:column;gap:10px}
-.c-item{display:flex;align-items:center;gap:14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:clamp(12px,2vw,18px);text-decoration:none;transition:all .22s}
-.c-item[href]:hover{border-color:var(--border2);transform:translateX(4px)}
-.c-icon{width:40px;height:40px;border-radius:10px;background:var(--teal4);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:.9rem;flex-shrink:0;transition:all .22s}
-.c-item[href]:hover .c-icon{background:var(--teal);color:#fff}
-.c-label{font-size:.58rem;font-weight:700;color:var(--muted2);letter-spacing:.07em;text-transform:uppercase;margin-bottom:2px}
-.c-val{font-size:.86rem;font-weight:600;color:var(--ink)}
-.wa-box{background:linear-gradient(145deg,#059669,#25D366);border-radius:var(--r2);padding:clamp(28px,4vw,44px);position:relative;overflow:hidden;box-shadow:0 20px 56px rgba(37,211,102,.18)}
-.wa-box::before{content:'';position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.06);right:-40px;bottom:-40px;pointer-events:none}
-.wa-label{font-size:.62rem;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
-.wa-icon-big{font-size:clamp(2.2rem,4vw,3rem);color:#fff;display:block;margin-bottom:12px}
-.wa-box h3{font-family:'Fraunces',serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:10px}
-.wa-box p{font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:24px}
-.wa-main-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#059669;padding:clamp(11px,2vh,15px) clamp(22px,3vw,30px);border-radius:50px;font-weight:700;font-size:clamp(.78rem,1.4vw,.88rem);text-decoration:none;transition:all .22s;box-shadow:0 6px 20px rgba(0,0,0,.12);position:relative;z-index:1}
-.wa-main-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.16)}
-.wa-num{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:12px;position:relative;z-index:1}
+#contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr min(400px,42%);gap:clamp(28px,5vw,64px);align-items:start}
+.contact-intro{font-size:clamp(.84rem,1.4vw,.94rem);color:var(--muted);line-height:1.8;margin-bottom:24px}
+.c-list{display:flex;flex-direction:column;gap:9px}
+.c-row{display:flex;align-items:center;gap:13px;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:clamp(12px,2vw,16px);transition:border-color .18s;text-decoration:none}
+.c-row[href]:hover{border-color:var(--blue)}
+.c-icon{width:36px;height:36px;border-radius:8px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:.85rem;flex-shrink:0;transition:background .18s}
+.c-row[href]:hover .c-icon{background:var(--blue);color:#fff}
+.c-lbl{font-size:.59rem;font-weight:600;color:var(--muted2);text-transform:uppercase;letter-spacing:.06em}
+.c-val{font-size:.84rem;font-weight:600;color:var(--ink);margin-top:1px}
+.wa-card{background:linear-gradient(135deg,#059669,#25d366);border-radius:14px;padding:clamp(24px,3.5vw,36px);color:#fff}
+.wa-card-label{font-size:.63rem;font-weight:600;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.wa-card-icon{font-size:clamp(1.8rem,3.5vw,2.4rem);margin-bottom:12px;display:block}
+.wa-card h3{font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;line-height:1.2;margin-bottom:10px}
+.wa-card p{font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:22px}
+.wa-card-btn{display:inline-flex;align-items:center;gap:7px;background:#fff;color:#059669;border-radius:7px;padding:11px 24px;font-weight:700;font-size:.82rem;transition:all .18s}
+.wa-card-btn:hover{background:#f0fdf4}
+.wa-num{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:12px}
 
 /* ── FOOTER ── */
-footer{background:var(--ink2);color:var(--white);position:relative;z-index:2}
-.foot-cta{padding:clamp(48px,7vh,80px) clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;max-width:var(--max);margin:0 auto;border-bottom:1px solid rgba(255,255,255,.06)}
-.foot-cta-h{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,4rem);font-weight:900;letter-spacing:-0.03em;line-height:.95;color:#fff}
-.foot-cta-h .teal{color:var(--teal2)}
-.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:clamp(24px,4vw,48px);padding:clamp(36px,5vh,56px) clamp(16px,4vw,40px);max-width:var(--max);margin:0 auto;border-bottom:1px solid rgba(255,255,255,.06)}
-.foot-brand-name{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:#fff}
-.foot-brand p{font-size:.76rem;color:rgba(255,255,255,.35);line-height:1.8;max-width:220px;margin-top:8px}
-.foot-col h4{font-size:.6rem;font-weight:700;color:var(--teal2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
-.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-.foot-col a{font-size:.76rem;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
-.foot-col a:hover{color:var(--teal2)}
-.foot-bottom{padding:16px clamp(16px,4vw,40px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;max-width:var(--max);margin:0 auto}
-.foot-copy{font-size:.65rem;color:rgba(255,255,255,.2)}
-.admin-link{font-size:.65rem;color:rgba(255,255,255,.15);text-decoration:none;transition:color .2s}
-.admin-link:hover{color:var(--teal2)}
+footer{background:var(--ink);color:#fff}
+.footer-top{max-width:var(--max);margin:0 auto;padding:clamp(40px,6vh,64px) clamp(16px,3vw,32px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-cta-h{font-size:clamp(1.4rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:#fff}
+.footer-cta-h span{color:#60a5fa}
+.footer-grid{max-width:var(--max);margin:0 auto;padding:clamp(28px,4vh,44px) clamp(16px,3vw,32px);display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:clamp(20px,4vw,40px);border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-brand-name{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:8px}
+.footer-brand p{font-size:.74rem;color:rgba(255,255,255,.35);line-height:1.75;max-width:210px}
+.footer-col h4{font-size:.62rem;font-weight:700;color:#60a5fa;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col a{font-size:.74rem;color:rgba(255,255,255,.35);transition:color .18s}
+.footer-col a:hover{color:#60a5fa}
+.footer-bottom{max-width:var(--max);margin:0 auto;padding:14px clamp(16px,3vw,32px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-copy{font-size:.65rem;color:rgba(255,255,255,.18)}
+.footer-admin{font-size:.63rem;color:rgba(255,255,255,.12);text-decoration:none;transition:color .18s}
+.footer-admin:hover{color:#60a5fa}
 
 /* ── TOAST ── */
-.toast{position:fixed;bottom:22px;right:22px;background:var(--teal);color:#fff;padding:11px 20px;border-radius:50px;font-size:.78rem;font-weight:600;z-index:9999;opacity:0;transform:translateY(8px);transition:all .3s;pointer-events:none;box-shadow:var(--shadow-md)}
-.toast.show{opacity:1;transform:none}
+.toast{position:fixed;bottom:20px;right:20px;background:var(--blue);color:#fff;padding:10px 18px;border-radius:7px;font-size:.76rem;font-weight:600;z-index:9999;opacity:0;transform:translateY(6px);transition:all .25s;pointer-events:none;box-shadow:var(--shadow-md)}
+.toast.on{opacity:1;transform:none}
 
-/* EMPTY STATE */
-.empty-state{text-align:center;padding:48px 24px;color:var(--muted2);font-size:.88rem}
-.empty-state i{font-size:2rem;margin-bottom:12px;display:block;color:var(--muted2)}
+/* ── EMPTY STATE ── */
+.empty-state{text-align:center;padding:40px 20px;color:var(--muted2);font-size:.85rem}
+.empty-state i{font-size:1.8rem;display:block;margin-bottom:10px}
 
 /* ── REVEAL ── */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
 .rv.on{opacity:1;transform:none}
-.rv-l{opacity:0;transform:translateX(-24px);transition:opacity .6s ease,transform .6s ease}
+.rv-l{opacity:0;transform:translateX(-20px);transition:opacity .55s ease,transform .55s ease}
 .rv-l.on{opacity:1;transform:none}
-.rv-r{opacity:0;transform:translateX(24px);transition:opacity .6s ease,transform .6s ease}
+.rv-r{opacity:0;transform:translateX(20px);transition:opacity .55s ease,transform .55s ease}
 .rv-r.on{opacity:1;transform:none}
-.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
 
-/* ══════════ RESPONSIVE ══════════ */
+/* ══════════════════════════
+   RESPONSIVE
+══════════════════════════ */
+/* ≤1024 tablet landscape */
 @media(max-width:1024px){
-  .nav-links{display:none}
-  .ham{display:flex}
-  .hero-inner{grid-template-columns:1fr}
-  .hero-img-side{display:none}
+  .nav-ul{display:none}
+  .ham-btn{display:flex}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-photo-col{display:none}
   .about-grid{grid-template-columns:1fr}
-  .about-photo{max-width:300px}
-  .edu-layout{grid-template-columns:1fr}
-  .contact-layout{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr 1fr}
+  .about-photo-wrap{max-width:260px}
+  .edu-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
   .proj-card{grid-template-columns:1fr}
-  .proj-img-col{min-height:220px}
-  .proj-img-col::after{background:linear-gradient(to bottom,transparent 55%,var(--white))}
-  .skills-head{grid-template-columns:1fr}
+  .proj-img{min-height:200px}
+  .skills-intro-row{grid-template-columns:1fr}
 }
+/* ≤768 tablet portrait */
 @media(max-width:768px){
   .hero-btns{flex-direction:column;align-items:stretch}
-  .hero-btns a{justify-content:center}
-  .foot-grid{grid-template-columns:1fr}
-  .foot-cta{flex-direction:column;gap:20px}
+  .hero-btns .btn{justify-content:center}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-top{flex-direction:column;align-items:flex-start;gap:18px}
   #cert-list{grid-template-columns:1fr}
 }
+/* ≤480 large phone */
 @media(max-width:480px){
-  .exp-top{flex-direction:column}
-  .hero-stats{gap:16px}
+  .nav-r .btn-ghost{display:none}
+  .exp-top{flex-direction:column;gap:8px}
+  .hero-meta{gap:16px}
+}
+/* ≤380 small phone */
+@media(max-width:380px){
+  .nav-r .btn-wa{font-size:0;padding:8px 10px}
+  .nav-r .btn-wa i{font-size:1rem;margin:0}
+  .nav-r .btn-wa span{display:none}
 }
 </style>
 </head>
 <body>
 
-<!-- MOBILE OVERLAY -->
-<div class="mob-overlay" id="mobOverlay">
-  <a href="#hero" onclick="closeMob()">Home</a>
-  <a href="#about" onclick="closeMob()">About</a>
-  <a href="#experience" onclick="closeMob()">Experience</a>
-  <a href="#skills" onclick="closeMob()">Skills</a>
-  <a href="#projects" onclick="closeMob()">Projects</a>
-  <a href="#certifications" onclick="closeMob()">Certifications</a>
-  <a href="#education" onclick="closeMob()">Education</a>
-  <a href="#contact" onclick="closeMob()">Contact</a>
-  <div class="mob-actions">
-    <a href="https://wa.me/919662150872" target="_blank" class="btn-wa-hero"><i class="fab fa-whatsapp"></i> WhatsApp Me</a>
-    <a href="Data Resume.pdf" download class="btn-outline-teal"><i class="fas fa-download"></i> Resume</a>
+<!-- MOBILE MENU -->
+<div class="mob" id="mob">
+  <a href="#hero" onclick="cMob()">Home</a>
+  <a href="#about" onclick="cMob()">About</a>
+  <a href="#experience" onclick="cMob()">Experience</a>
+  <a href="#skills" onclick="cMob()">Skills</a>
+  <a href="#projects" onclick="cMob()">Projects</a>
+  <a href="#certifications" onclick="cMob()">Certifications</a>
+  <a href="#education" onclick="cMob()">Education</a>
+  <a href="#contact" onclick="cMob()">Contact</a>
+  <div class="mob-btns">
+    <a href="https://wa.me/919662150872" target="_blank" class="btn btn-wa" onclick="cMob()"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="Data Resume.pdf" download class="btn btn-ghost" onclick="cMob()"><i class="fas fa-download"></i> Resume</a>
   </div>
 </div>
 
 <!-- NAV -->
-<nav class="nav" id="mainNav">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-brand">
-      <div class="nav-avatar">IS</div>
-      <div class="nav-name">Ibrahim Sidat <span>Data Analyst</span></div>
+<nav class="nav" id="nav">
+  <div class="nav-wrap">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-dot">IS</div>
+      Ibrahim Sidat
     </a>
-    <ul class="nav-links" id="navLinks">
+    <ul class="nav-ul" id="navUl">
       <li><a href="#hero" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -335,171 +335,157 @@ footer{background:var(--ink2);color:var(--white);position:relative;z-index:2}
       <li><a href="#certifications">Certs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="nav-right">
-      <a href="https://wa.me/919662150872" target="_blank" class="btn-wa-sm"><i class="fab fa-whatsapp"></i> <span id="waLabel">WhatsApp</span></a>
-      <a href="Data Resume.pdf" download class="btn-teal" id="dlCV"><i class="fas fa-download"></i> <span id="resumeLabel">Resume</span></a>
-      <button class="ham" id="hamBtn"><span></span><span></span><span></span></button>
+    <div class="nav-r">
+      <a href="https://wa.me/919662150872" target="_blank" class="btn btn-wa btn-sm"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>
+      <a href="Data Resume.pdf" download class="btn btn-ghost btn-sm" id="dlCV"><i class="fas fa-download"></i> Resume</a>
+      <button class="ham-btn" id="ham"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
 <div class="toast" id="toast"></div>
 
-<!-- ══ HERO ══ -->
+<!-- ════ HERO ════ -->
 <section id="hero">
-  <div class="hero-bg-blob"></div>
-  <div class="hero-bg-blob2"></div>
-  <div class="hero-inner">
+  <div class="hero-grid">
     <div>
-      <div class="hero-badge">Available for opportunities</div>
-      <h1 class="hero-h">
-        Turning data<br>into <span class="teal italic">decisions</span>
-      </h1>
-      <p class="hero-sub"><strong>SQL · Excel · Power BI · Python · Tableau</strong><br>Aspiring Data Analyst based in Navsari, Gujarat. Currently interning at BH Sales. Open to internships, junior roles, and remote work.</p>
+      <div class="hero-available"><i class="fas fa-circle"></i> Open to opportunities</div>
+      <h1 class="hero-h">Data Analyst<br><span>turning raw data</span><br>into decisions.</h1>
+      <p class="hero-tagline">
+        <strong>SQL · Excel · Power BI · Python · Tableau</strong><br>
+        I build reporting pipelines, write SQL queries, clean datasets, and translate findings into plain-language business recommendations. Currently interning at BH Sales. Based in Navsari, Gujarat — open to remote &amp; on-site roles.
+      </p>
       <div class="hero-btns">
-        <a href="#projects" class="btn-teal"><i class="fas fa-folder-open"></i> View Projects</a>
-        <a href="https://wa.me/919662150872" target="_blank" class="btn-wa-hero"><i class="fab fa-whatsapp"></i> WhatsApp Me</a>
-        <a href="Data Resume.pdf" download class="btn-outline-teal"><i class="fas fa-download"></i> Resume</a>
+        <a href="#projects" class="btn btn-blue"><i class="fas fa-folder-open"></i> View Projects</a>
+        <a href="https://wa.me/919662150872" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp Me</a>
+        <a href="Data Resume.pdf" download class="btn btn-ghost"><i class="fas fa-download"></i> Download Resume</a>
       </div>
-      <div class="hero-stats">
-        <div class="hstat"><div class="hstat-n">2+</div><div class="hstat-l">Certifications</div></div>
-        <div class="hstat"><div class="hstat-n">1</div><div class="hstat-l">Internship</div></div>
-        <div class="hstat"><div class="hstat-n">3+</div><div class="hstat-l">Projects</div></div>
-        <div class="hstat"><div class="hstat-n">100%</div><div class="hstat-l">Remote Ready</div></div>
+      <hr class="hero-divider">
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="hero-meta-num">2+</div><div class="hero-meta-label">Certifications</div></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">1</div><div class="hero-meta-label">Internship</div></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">~30%</div><div class="hero-meta-label">Reporting Time Saved</div></div>
+        <div class="hero-meta-item"><div class="hero-meta-num">100%</div><div class="hero-meta-label">Remote Ready</div></div>
       </div>
     </div>
-    <div class="hero-img-side">
-      <div class="hero-img-card">
+    <div class="hero-photo-col">
+      <div class="hero-photo">
         <img src="1x.png" alt="Ibrahim Sidat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="hero-img-fallback" style="display:none">IS</div>
+        <div class="hero-photo-fb" style="display:none">IS</div>
       </div>
-      <div class="hero-float-badge">
-        <div class="hfb-icon"><i class="fas fa-chart-bar"></i></div>
-        <div><div class="hfb-num">2+</div><div class="hfb-label">Simulations Done</div></div>
+      <div class="hero-card">
+        <div class="hero-card-icon"><i class="fas fa-chart-bar"></i></div>
+        <div><div class="hero-card-num">2+</div><div class="hero-card-label">Simulations Completed</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ ABOUT ══ -->
+<!-- ════ ABOUT ════ -->
 <section id="about">
-  <div class="sec">
-    <div class="sec-inner">
-      <div class="about-grid">
-        <div class="rv-l">
-          <div class="about-photo">
-            <img src="1x.png" alt="Ibrahim Sidat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="about-photo-fb" style="display:none">IS</div>
-            <div class="about-tag"><i class="fas fa-map-marker-alt"></i> Navsari, Gujarat</div>
-          </div>
+  <div class="sec-wrap">
+    <div class="about-grid">
+      <div class="rv-l">
+        <div class="about-photo-wrap">
+          <img src="1x.png" alt="Ibrahim Sidat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="about-fb" style="display:none">IS</div>
         </div>
-        <div class="rv-r">
-          <div class="eyebrow">About Me</div>
-          <h2 class="sec-h">Passionate about<br><em class="teal">data-driven</em> thinking</h2>
-          <div class="about-txt">
-            <p>Pursuing a <strong>Bachelor of Vocation in Software Development</strong> at RNGPIT, Bardoli — building a strong technical foundation in databases, algorithms, and software engineering.</p>
-            <p>Gained real-world exposure via virtual simulations with <strong>Deloitte Australia</strong> and <strong>Tata Group</strong> through Forage — covering data cleaning, analysis, reporting, and business insight generation.</p>
-            <p>Currently interning as a <strong>Data Analyst at BH Sales</strong>, working with Excel reporting, SQL analysis, and business intelligence tasks.</p>
-          </div>
-          <div class="about-chips">
-            <span class="achip">SQL</span><span class="achip">Excel</span><span class="achip">Power BI</span>
-            <span class="achip">Python</span><span class="achip">Tableau</span><span class="achip">Data Cleaning</span>
-          </div>
-          <div class="role-list">
-            <div class="role-row"><span class="role-name">Data Analyst</span><span class="role-pill">Open</span></div>
-            <div class="role-row"><span class="role-name">Junior Data Analyst</span><span class="role-pill">Open</span></div>
-            <div class="role-row"><span class="role-name">Data Analytics Intern</span><span class="role-pill">Open</span></div>
-            <div class="role-row"><span class="role-name">Remote Opportunities</span><span class="role-pill">Open</span></div>
-          </div>
+      </div>
+      <div class="rv-r">
+        <p class="sec-label">About Me</p>
+        <h2 class="sec-title">Business-first mindset,<br>data-driven approach.</h2>
+        <div class="about-location"><i class="fas fa-map-marker-alt"></i> Navsari, Gujarat, India</div>
+        <div class="about-bio">
+          <p>I don't just build dashboards — I ask <strong>what decision this data needs to support</strong>, then work backwards to the analysis. Currently working as a <strong>Data Analyst Intern at BH Sales</strong>, building Excel reporting pipelines and SQL-based workflows that surface sales insights for business teams.</p>
+          <p>Gained hands-on exposure through virtual simulations with <strong>Deloitte Australia</strong> (forensic data analysis, anomaly detection) and <strong>Tata Group</strong> (AI-powered analytics) via Forage. Deepening skills in <strong>Python (Pandas, NumPy)</strong> and exploring how AI tools are reshaping analytics workflows.</p>
         </div>
+        <div class="about-chips">
+          <span class="achip">SQL</span><span class="achip">Excel (Advanced)</span><span class="achip">Power BI</span>
+          <span class="achip">Python</span><span class="achip">Tableau</span><span class="achip">Data Cleaning</span>
+          <span class="achip">Business Analysis</span><span class="achip">AI-Curious</span>
+        </div>
+        <table class="open-table">
+          <tr><td class="td-role">Junior Data Analyst</td><td class="td-badge"><span class="badge-open">Open</span></td></tr>
+          <tr><td class="td-role">BI Analyst</td><td class="td-badge"><span class="badge-open">Open</span></td></tr>
+          <tr><td class="td-role">Analytics Intern</td><td class="td-badge"><span class="badge-open">Open</span></td></tr>
+          <tr><td class="td-role">Data Operations Analyst</td><td class="td-badge"><span class="badge-open">Open</span></td></tr>
+        </table>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ SKILLS ══ -->
+<!-- ════ SKILLS ════ -->
 <section id="skills">
-  <div class="sec">
-    <div class="sec-inner">
-      <div class="skills-head rv">
-        <div>
-          <div class="eyebrow">My Expertise</div>
-          <h2 class="sec-h" style="margin-bottom:0">Skills & <em class="teal">Tools</em></h2>
-        </div>
-        <p class="skills-sub">Core tools I use every day to clean, analyze, and visualize data — transforming complexity into actionable business insights.</p>
+  <div class="sec-wrap">
+    <div class="skills-intro-row rv">
+      <div>
+        <p class="sec-label">Skills &amp; Tools</p>
+        <h2 class="sec-title" style="margin-bottom:0">What I work with.</h2>
       </div>
-      <div class="skills-grid" id="skills-grid">
-        <!-- rendered by JS -->
-      </div>
+      <p class="skills-intro-sub">Core tools I use every day to clean, analyze, and visualize data — turning complex datasets into clear business recommendations.</p>
     </div>
+    <div class="skills-grid" id="skills-grid"></div>
   </div>
 </section>
 
-<!-- ══ EXPERIENCE ══ -->
+<!-- ════ EXPERIENCE ════ -->
 <section id="experience">
-  <div class="sec">
-    <div class="sec-inner">
-      <div class="eyebrow rv">Work Experience</div>
-      <h2 class="sec-h rv">Where I've <em class="teal">contributed</em></h2>
-      <div id="exp-list"></div>
-    </div>
+  <div class="sec-wrap">
+    <p class="sec-label rv">Work Experience</p>
+    <h2 class="sec-title rv">Where I've contributed.</h2>
+    <div id="exp-list"></div>
   </div>
 </section>
 
-<!-- ══ PROJECTS ══ -->
+<!-- ════ PROJECTS ════ -->
 <section id="projects">
-  <div class="sec">
-    <div class="sec-inner">
-      <div class="proj-header-row rv">
-        <div>
-          <div class="eyebrow">My Work</div>
-          <h2 class="sec-h" style="margin-bottom:0">Featured <em class="teal">Projects</em></h2>
-        </div>
-        <a href="https://wa.me/919662150872" target="_blank" class="btn-wa-hero"><i class="fab fa-whatsapp"></i> Discuss a Project</a>
+  <div class="sec-wrap">
+    <div class="proj-top-row rv">
+      <div>
+        <p class="sec-label">Projects</p>
+        <h2 class="sec-title" style="margin-bottom:0">Featured work.</h2>
       </div>
-      <div id="proj-list"></div>
+      <a href="https://wa.me/919662150872" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Discuss a Project</a>
     </div>
+    <div id="proj-list"></div>
   </div>
 </section>
 
-<!-- ══ CERTIFICATIONS ══ -->
+<!-- ════ CERTIFICATIONS ════ -->
 <section id="certifications">
-  <div class="sec">
-    <div class="sec-inner">
-      <div class="eyebrow rv">Credentials</div>
-      <h2 class="sec-h rv">My <em class="teal">Certifications</em></h2>
-      <div id="cert-list"></div>
-    </div>
+  <div class="sec-wrap">
+    <p class="sec-label rv">Certifications</p>
+    <h2 class="sec-title rv">Credentials.</h2>
+    <div id="cert-list"></div>
   </div>
 </section>
 
-<!-- ══ EDUCATION ══ -->
+<!-- ════ EDUCATION ════ -->
 <section id="education">
-  <div class="sec">
-    <div class="sec-inner">
-      <div class="eyebrow rv">Academic Background</div>
-      <h2 class="sec-h rv">My <em class="teal">Education</em></h2>
-      <div class="edu-layout">
-        <div class="rv-l">
-          <div class="edu-main">
-            <span class="edu-yr-badge">Since 2024</span>
-            <div class="edu-degree">Bachelor of Vocation (B.Voc)<br>Software Development</div>
-            <div class="edu-school"><i class="fas fa-university"></i>R. N. G. Patel Institute of Technology (RNGPIT) · An Autonomous Institute U/s UGC Act 1956, Bardoli, Gujarat</div>
-            <p>Coursework covers software development, data structures, algorithms, and database management — providing a strong foundation for data analytics and business intelligence careers.</p>
-          </div>
+  <div class="sec-wrap">
+    <p class="sec-label rv">Education</p>
+    <h2 class="sec-title rv">Academic background.</h2>
+    <div class="edu-grid">
+      <div class="rv-l">
+        <div class="edu-main">
+          <span class="edu-yr">Since 2024</span>
+          <div class="edu-degree">Bachelor of Vocation (B.Voc)<br>Software Development</div>
+          <div class="edu-school"><i class="fas fa-university"></i> R. N. G. Patel Institute of Technology (RNGPIT) · An Autonomous Institute U/s UGC Act 1956, Bardoli, Gujarat</div>
+          <p>Coursework covers software development, data structures, algorithms, and database management systems — providing a strong technical foundation for a career in data analytics.</p>
         </div>
-        <div class="rv-r">
-          <div class="edu-side">
-            <div class="edu-fact"><div class="ef-icon"><i class="fas fa-graduation-cap"></i></div><div><div class="ef-label">Degree</div><div class="ef-val">B.Voc Software Development</div></div></div>
-            <div class="edu-fact"><div class="ef-icon"><i class="fas fa-university"></i></div><div><div class="ef-label">Institution</div><div class="ef-val">RNGPIT, Bardoli</div></div></div>
-            <div class="edu-fact"><div class="ef-icon"><i class="fas fa-calendar"></i></div><div><div class="ef-label">Status</div><div class="ef-val">2024 · Currently Enrolled ●</div></div></div>
-            <div class="edu-subj">
-              <div class="edu-subj-label">Core Subjects</div>
-              <div class="subj-grid">
-                <span class="subj">Data Structures</span><span class="subj">Algorithms</span>
-                <span class="subj">DBMS</span><span class="subj">Software Dev</span>
-                <span class="subj">OOP</span><span class="subj">Web Tech</span>
-              </div>
+      </div>
+      <div class="rv-r">
+        <div class="edu-facts">
+          <div class="edu-fact"><div class="ef-icon"><i class="fas fa-graduation-cap"></i></div><div><div class="ef-label">Degree</div><div class="ef-val">B.Voc Software Development</div></div></div>
+          <div class="edu-fact"><div class="ef-icon"><i class="fas fa-university"></i></div><div><div class="ef-label">Institution</div><div class="ef-val">RNGPIT, Bardoli</div></div></div>
+          <div class="edu-fact"><div class="ef-icon"><i class="fas fa-calendar"></i></div><div><div class="ef-label">Status</div><div class="ef-val" style="color:var(--green)">2024 · Currently Enrolled</div></div></div>
+          <div class="edu-subj">
+            <div class="edu-subj-label">Core Subjects</div>
+            <div class="subj-chips">
+              <span class="subj-chip">Data Structures</span><span class="subj-chip">Algorithms</span>
+              <span class="subj-chip">DBMS</span><span class="subj-chip">Software Dev</span>
+              <span class="subj-chip">OOP</span><span class="subj-chip">Web Tech</span>
             </div>
           </div>
         </div>
@@ -508,49 +494,47 @@ footer{background:var(--ink2);color:var(--white);position:relative;z-index:2}
   </div>
 </section>
 
-<!-- ══ CONTACT ══ -->
+<!-- ════ CONTACT ════ -->
 <section id="contact">
-  <div class="sec">
-    <div class="sec-inner">
-      <div class="eyebrow rv">Get In Touch</div>
-      <h2 class="sec-h rv">Let's <em class="teal">Connect</em></h2>
-      <div class="contact-layout">
-        <div class="rv-l">
-          <p class="contact-lead">Seeking entry-level Data Analyst, Junior Data Analyst, or Data Analytics Intern opportunities. Open to remote roles and full-time positions across India.</p>
-          <div class="c-list">
-            <a href="mailto:isidat97@gmail.com" class="c-item"><div class="c-icon"><i class="fas fa-envelope"></i></div><div><div class="c-label">Email</div><div class="c-val">isidat97@gmail.com</div></div></a>
-            <a href="https://wa.me/919662150872" target="_blank" class="c-item"><div class="c-icon"><i class="fab fa-whatsapp"></i></div><div><div class="c-label">WhatsApp</div><div class="c-val">+91 96621 50872</div></div></a>
-            <a href="https://www.linkedin.com/in/ibrahimsidat-0040583aa" target="_blank" class="c-item"><div class="c-icon"><i class="fab fa-linkedin"></i></div><div><div class="c-label">LinkedIn</div><div class="c-val">ibrahimsidat-0040583aa</div></div></a>
-            <div class="c-item"><div class="c-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="c-label">Location</div><div class="c-val">Navsari, Gujarat, India</div></div></div>
-          </div>
+  <div class="sec-wrap">
+    <p class="sec-label rv">Contact</p>
+    <h2 class="sec-title rv">Let's connect.</h2>
+    <div class="contact-grid">
+      <div class="rv-l">
+        <p class="contact-intro">Seeking Junior Data Analyst, BI Analyst, Analytics Intern, or Data Operations Analyst roles. Open to on-site, remote, and hybrid positions across India.</p>
+        <div class="c-list">
+          <a href="mailto:isidat97@gmail.com" class="c-row"><div class="c-icon"><i class="fas fa-envelope"></i></div><div><div class="c-lbl">Email</div><div class="c-val">isidat97@gmail.com</div></div></a>
+          <a href="https://wa.me/919662150872" target="_blank" class="c-row"><div class="c-icon"><i class="fab fa-whatsapp"></i></div><div><div class="c-lbl">WhatsApp</div><div class="c-val">+91 96621 50872</div></div></a>
+          <a href="https://www.linkedin.com/in/ibrahimsidat-0040583aa" target="_blank" class="c-row"><div class="c-icon"><i class="fab fa-linkedin"></i></div><div><div class="c-lbl">LinkedIn</div><div class="c-val">ibrahimsidat-0040583aa</div></div></a>
+          <div class="c-row"><div class="c-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="c-lbl">Location</div><div class="c-val">Navsari, Gujarat, India</div></div></div>
         </div>
-        <div class="rv-r">
-          <div class="wa-box">
-            <div class="wa-label">Fastest response</div>
-            <i class="fab fa-whatsapp wa-icon-big"></i>
-            <h3>Message me on WhatsApp</h3>
-            <p>Available for job opportunities, internship inquiries, project collaboration, or a quick data analytics conversation.</p>
-            <a href="https://wa.me/919662150872" target="_blank" class="wa-main-btn"><i class="fab fa-whatsapp"></i> Start a Conversation</a>
-            <div class="wa-num">+91 96621 50872</div>
-          </div>
+      </div>
+      <div class="rv-r">
+        <div class="wa-card">
+          <div class="wa-card-label">Fastest response</div>
+          <i class="fab fa-whatsapp wa-card-icon"></i>
+          <h3>Message me on WhatsApp</h3>
+          <p>Available for job opportunities, internship inquiries, project collaboration, or a quick chat about data analytics.</p>
+          <a href="https://wa.me/919662150872" target="_blank" class="wa-card-btn"><i class="fab fa-whatsapp"></i> Start Conversation</a>
+          <div class="wa-num">+91 96621 50872</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ════ FOOTER ════ -->
 <footer>
-  <div class="foot-cta">
-    <h2 class="foot-cta-h">Ready to work<br>with <span class="teal">data</span> together?</h2>
-    <a href="https://wa.me/919662150872" target="_blank" class="btn-wa-hero" style="font-size:.9rem;padding:13px 28px"><i class="fab fa-whatsapp"></i> Hire Me on WhatsApp</a>
+  <div class="footer-top">
+    <h2 class="footer-cta-h">Ready to work with<br><span>data</span> together?</h2>
+    <a href="https://wa.me/919662150872" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Hire Me on WhatsApp</a>
   </div>
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <div class="foot-brand-name">Ibrahim Sidat</div>
-      <p>Aspiring Data Analyst · SQL · Excel · Power BI. Navsari, Gujarat. Open to remote opportunities.</p>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Ibrahim Sidat</div>
+      <p>Data Analyst · SQL · Excel · Power BI. Navsari, Gujarat. Open to remote, hybrid &amp; on-site roles.</p>
     </div>
-    <div class="foot-col">
+    <div class="footer-col">
       <h4>Navigate</h4>
       <ul>
         <li><a href="#hero">Home</a></li>
@@ -561,7 +545,7 @@ footer{background:var(--ink2);color:var(--white);position:relative;z-index:2}
         <li><a href="#certifications">Certifications</a></li>
       </ul>
     </div>
-    <div class="foot-col">
+    <div class="footer-col">
       <h4>Contact</h4>
       <ul>
         <li><a href="https://wa.me/919662150872" target="_blank">WhatsApp: +91 96621 50872</a></li>
@@ -571,187 +555,208 @@ footer{background:var(--ink2);color:var(--white);position:relative;z-index:2}
       </ul>
     </div>
   </div>
-  <div class="foot-bottom">
-    <p class="foot-copy">© <span id="yr"></span> Ibrahim Sidat. All rights reserved.</p>
-    <a href="admin.html" class="admin-link">⚙ Admin Panel</a>
+  <div class="footer-bottom">
+    <span class="footer-copy">© <span id="yr"></span> Ibrahim Sidat · All rights reserved.</span>
+    <a href="admin.html" class="footer-admin">⚙ Admin</a>
   </div>
 </footer>
 
 <script>
-/* ═══════════════════════════════
-   DEFAULT DATA
-═══════════════════════════════ */
+/* ── DEFAULT DATA (matches resume) ── */
 const DEFAULTS = {
   skills:[
-    {num:'01',icon:'fas fa-database',name:'SQL',desc:'Database querying, joins, subqueries, and data manipulation to organize and analyze structured data.'},
-    {num:'02',icon:'fas fa-file-excel',name:'Microsoft Excel',desc:'Advanced formulas, pivot tables, data cleaning, and dashboard creation for business reporting.'},
-    {num:'03',icon:'fas fa-chart-pie',name:'Power BI',desc:'Interactive dashboards, data modeling, DAX formulas, and visual storytelling for stakeholders.'},
-    {num:'04',icon:'fab fa-python',name:'Python',desc:'Data analysis with pandas/numpy; visualization with matplotlib for insight generation.'},
-    {num:'05',icon:'fas fa-chart-bar',name:'Tableau',desc:'Visual analytics and interactive dashboards to communicate insights clearly and effectively.'},
-    {num:'06',icon:'fas fa-broom',name:'Data Cleaning',desc:'Identifying, correcting, and structuring messy datasets to ensure accuracy for reliable analysis.'}
+    {name:'SQL',icon:'fas fa-database',desc:'Write queries to extract, transform, and analyze business data across product lines and regions.'},
+    {name:'Microsoft Excel (Advanced)',icon:'fas fa-file-excel',desc:'Build reporting templates, pivot tables, and dashboards used by business teams for performance tracking.'},
+    {name:'Power BI',icon:'fas fa-chart-pie',desc:'Design interactive dashboards and visual reports that surface actionable insights for stakeholders.'},
+    {name:'Python',icon:'fab fa-python',desc:'Data analysis with Pandas and NumPy; exploring AI-powered analytics workflows and automation.'},
+    {name:'Tableau',icon:'fas fa-chart-bar',desc:'Visual analytics and interactive dashboards to communicate data findings clearly and effectively.'},
+    {name:'Data Cleaning',icon:'fas fa-broom',desc:'Handle nulls, duplicates, and formatting inconsistencies to ensure analysis-ready data quality.'}
   ],
   experiences:[
-    {title:'Data Analyst Intern',company:'BH Sales',period:'April 2026 – Present',duration:'2 months',type:'Internship',location:'Remote',desc:'Assisting with data collection, Excel reporting, data cleaning, and basic business analysis. Using Excel and SQL to organize and analyze sales-related data, generating structured reports that support business decision-making.',tags:['SQL','Excel','Pivot Tables','Data Cleaning','Business Analysis','Reporting'],current:true}
+    {
+      title:'Data Analyst',
+      company:'BH Sales',
+      period:'April 2026 – Present',
+      duration:'2 months',
+      type:'Internship',
+      location:'Remote',
+      desc:'Building Excel reporting pipelines and SQL-based analysis workflows that surface sales insights for business teams.',
+      bullets:[
+        'Designed and maintained Excel-based sales reporting templates used by business teams for weekly performance tracking — reducing manual reporting time by ~30%',
+        'Wrote SQL queries to extract and segment sales data across product lines, enabling faster identification of top-performing SKUs and underperforming regions',
+        'Cleaned and standardized incoming sales datasets (handling nulls, duplicates, formatting inconsistencies) to ensure analysis-ready data quality',
+        'Delivered ad-hoc analysis reports translating raw figures into actionable recommendations for sales leadership'
+      ],
+      tags:['SQL','Excel (Advanced)','Data Cleaning','Pivot Tables','Business Analysis','Reporting'],
+      current:true
+    }
   ],
   projects:[
-    {title:'Sales Data Analysis & Reporting Dashboard',company:'BH Sales · Internship Project',desc:'Real-world data collection, Excel reporting, data cleaning and business analysis on live sales datasets. Built structured reports and insights for business decision-making using Excel and SQL.',techs:['Excel','SQL','Pivot Tables','Data Cleaning','Business Analysis'],img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80',github:'https://github.com/isidat97/dmart-sales-dashboard-excel',liveLink:''}
+    {
+      title:'DMart Sales Dashboard (Excel)',
+      company:'Personal Project',
+      desc:'End-to-end sales dashboard built in Excel — data cleaning, pivot tables, and visual reporting to track category performance, regional trends, and top SKUs.',
+      techs:['Excel','Pivot Tables','Data Cleaning','Data Visualization','Business Analysis'],
+      img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80',
+      github:'https://github.com/isidat97/dmart-sales-dashboard-excel',
+      liveLink:''
+    }
   ],
   certifications:[
-    {title:'GenAI Powered Data Analytics Job Simulation',issuer:'Tata Group · via Forage',desc:'Comprehensive simulation using Excel, SQL, Python and Tableau with GenAI integration. Developed skills in data interpretation, visualisation and business insight generation.',img:'https://kommodo.ai/i/q6vbvnn4jMVzUkeNnsra',link:'https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_695f4b722a2f02971f7e1a20_1769930358930_completion_certificate.pdf'},
-    {title:'Data Analytics Job Simulation',issuer:'Deloitte Australia · via Forage',desc:'Virtual simulation involving data cleaning, analysis and reporting using Excel, SQL, Python and Tableau. Hands-on experience with structured datasets and generating business insights.',img:'https://kommodo.ai/api/image/q6vbvnn4jMVzUkeNnsra',link:'https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_695f4b722a2f02971f7e1a20_1769934640737_completion_certificate.pdf'}
+    {
+      title:'GenAI Powered Data Analytics Job Simulation',
+      issuer:'Tata Group · via Forage',
+      desc:'Applied AI-powered analytics frameworks to real-world business datasets. Covered Excel, SQL, Python and Tableau with GenAI integration for data interpretation and business insight generation.',
+      img:'https://kommodo.ai/i/gXRMRN58DvH9B9xfgYJ4',
+      link:''
+    },
+    {
+      title:'Data Analytics Job Simulation',
+      issuer:'Deloitte Australia · via Forage',
+      desc:'Performed data analysis and forensic data tasks; identified anomalies and produced structured findings reports. Hands-on experience with data cleaning, analysis and reporting.',
+      img:'https://kommodo.ai/i/dvKZ7jZlZPlbymHxPo3T',
+      link:''
+    }
   ]
 };
 
 function getData(){
-  try{
-    const s=localStorage.getItem('portfolio_data');
-    return s?JSON.parse(s):DEFAULTS;
-  }catch(e){return DEFAULTS;}
+  try{const s=localStorage.getItem('portfolio_data');return s?JSON.parse(s):DEFAULTS;}
+  catch(e){return DEFAULTS;}
 }
 
-/* ═══════════════════════════════
-   RENDER SKILLS
-═══════════════════════════════ */
-function renderSkills(data){
+/* ── RENDER SKILLS ── */
+function renderSkills(d){
   const g=document.getElementById('skills-grid');
-  if(!data.skills||!data.skills.length){g.innerHTML='<div class="empty-state"><i class="fas fa-tools"></i>No skills added yet.</div>';return;}
-  g.innerHTML=data.skills.map((sk,i)=>`
-    <div class="sk-card rv d${(i%4)+1}">
+  if(!d.skills?.length){g.innerHTML='<div class="empty-state"><i class="fas fa-tools"></i>No skills yet.</div>';return;}
+  g.innerHTML=d.skills.map((s,i)=>`
+    <div class="sk rv d${(i%4)+1}">
       <div class="sk-num">${String(i+1).padStart(2,'0')}</div>
-      <div class="sk-icon"><i class="${sk.icon}"></i></div>
-      <div class="sk-name">${esc(sk.name)}</div>
-      <div class="sk-desc">${esc(sk.desc)}</div>
+      <div class="sk-icon"><i class="${x(s.icon)}"></i></div>
+      <div class="sk-name">${x(s.name)}</div>
+      <div class="sk-desc">${x(s.desc)}</div>
     </div>`).join('');
 }
 
-/* ═══════════════════════════════
-   RENDER EXPERIENCE
-═══════════════════════════════ */
-function renderExp(data){
+/* ── RENDER EXPERIENCE ── */
+function renderExp(d){
   const el=document.getElementById('exp-list');
-  if(!data.experiences||!data.experiences.length){el.innerHTML='<div class="empty-state"><i class="fas fa-briefcase"></i>No experience added yet.</div>';return;}
-  el.innerHTML=data.experiences.map(ex=>`
-    <div class="exp-card rv" style="margin-bottom:20px">
+  if(!d.experiences?.length){el.innerHTML='<div class="empty-state"><i class="fas fa-briefcase"></i>No experience yet.</div>';return;}
+  el.innerHTML=d.experiences.map(e=>`
+    <div class="exp-card rv">
       <div class="exp-top">
         <div>
-          <div class="exp-title">${esc(ex.title)}</div>
-          <div class="exp-co">${esc(ex.company)}</div>
+          <div class="exp-title">${x(e.title)}</div>
+          <div class="exp-company">${x(e.company)}</div>
         </div>
-        ${ex.current?'<div class="exp-live">● Active Role</div>':''}
+        ${e.current?'<div class="exp-badge"><i class="fas fa-circle"></i> Active</div>':''}
       </div>
       <div class="exp-meta">
-        <span><i class="fas fa-calendar-alt"></i>${esc(ex.period)}</span>
-        ${ex.duration?`<span><i class="fas fa-clock"></i>${esc(ex.duration)}</span>`:''}
-        ${ex.location?`<span><i class="fas fa-wifi"></i>${esc(ex.location)}</span>`:''}
-        ${ex.type?`<span><i class="fas fa-briefcase"></i>${esc(ex.type)}</span>`:''}
+        <span><i class="fas fa-calendar-alt"></i>${x(e.period)}</span>
+        ${e.duration?`<span><i class="fas fa-clock"></i>${x(e.duration)}</span>`:''}
+        ${e.location?`<span><i class="fas fa-wifi"></i>${x(e.location)}</span>`:''}
+        ${e.type?`<span><i class="fas fa-briefcase"></i>${x(e.type)}</span>`:''}
       </div>
-      <p class="exp-desc">${esc(ex.desc)}</p>
-      <div class="exp-tags">${(ex.tags||[]).map(t=>`<span class="etag">${esc(t)}</span>`).join('')}</div>
+      ${e.desc?`<p class="exp-desc">${x(e.desc)}</p>`:''}
+      ${(e.bullets?.length)?`<ul class="exp-bullets">${e.bullets.map(b=>`<li>${x(b)}</li>`).join('')}</ul>`:''}
+      <div class="exp-tags">${(e.tags||[]).map(t=>`<span class="etag">${x(t)}</span>`).join('')}</div>
     </div>`).join('');
 }
 
-/* ═══════════════════════════════
-   RENDER PROJECTS
-═══════════════════════════════ */
-function renderProjects(data){
+/* ── RENDER PROJECTS ── */
+function renderProjects(d){
   const el=document.getElementById('proj-list');
-  if(!data.projects||!data.projects.length){el.innerHTML='<div class="empty-state"><i class="fas fa-folder-open"></i>No projects added yet.</div>';return;}
-  el.innerHTML=data.projects.map(p=>`
-    <div class="proj-card rv" style="margin-bottom:20px">
-      <div class="proj-img-col">
-        <img src="${esc(p.img||'')}" alt="${esc(p.title)}" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80'">
+  if(!d.projects?.length){el.innerHTML='<div class="empty-state"><i class="fas fa-folder-open"></i>No projects yet.</div>';return;}
+  el.innerHTML=d.projects.map(p=>`
+    <div class="proj-card rv">
+      <div class="proj-img">
+        <img src="${x(p.img||'')}" alt="${x(p.title)}" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80'">
       </div>
       <div class="proj-info">
-        <div class="proj-tag-label">${esc(p.company||'Project')}</div>
-        <div class="proj-title">${esc(p.title)}</div>
-        <div class="proj-desc">${esc(p.desc)}</div>
-        <div class="proj-techs">${(p.techs||[]).map(t=>`<span class="pt">${esc(t)}</span>`).join('')}</div>
+        <div class="proj-label">${x(p.company||'Project')}</div>
+        <div class="proj-title">${x(p.title)}</div>
+        <div class="proj-desc">${x(p.desc)}</div>
+        <div class="proj-techs">${(p.techs||[]).map(t=>`<span class="pt">${x(t)}</span>`).join('')}</div>
         <div class="proj-links">
-          ${p.github?`<a href="${esc(p.github)}" target="_blank" class="proj-link-btn github"><i class="fab fa-github"></i> GitHub</a>`:''}
-          ${p.liveLink?`<a href="${esc(p.liveLink)}" target="_blank" class="proj-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>`:''}
+          ${p.github?`<a href="${x(p.github)}" target="_blank" class="plbtn gh"><i class="fab fa-github"></i> GitHub</a>`:''}
+          ${p.liveLink?`<a href="${x(p.liveLink)}" target="_blank" class="plbtn"><i class="fas fa-external-link-alt"></i> Live Demo</a>`:''}
         </div>
       </div>
     </div>`).join('');
 }
 
-/* ═══════════════════════════════
-   RENDER CERTIFICATIONS
-═══════════════════════════════ */
-function renderCerts(data){
+/* ── RENDER CERTS ── */
+function renderCerts(d){
   const el=document.getElementById('cert-list');
-  if(!data.certifications||!data.certifications.length){el.innerHTML='<div class="empty-state"><i class="fas fa-certificate"></i>No certifications added yet.</div>';return;}
-  el.innerHTML=data.certifications.map(c=>`
+  if(!d.certifications?.length){el.innerHTML='<div class="empty-state"><i class="fas fa-certificate"></i>No certifications yet.</div>';return;}
+  el.innerHTML=d.certifications.map(c=>`
     <div class="cert-card rv">
-      <div class="cert-img">
-        <img src="${esc(c.img||'')}" alt="${esc(c.title)}" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'">
-        <div class="cert-img-overlay"></div>
-        <div class="cert-badge-pill">Certified</div>
+      <div class="cert-top-bar">
+        <span class="cert-issuer-badge">${x(c.issuer)}</span>
+        <span class="cert-verified">✓ Certified</span>
+      </div>
+      <div class="cert-img-wrap">
+        <img src="${x(c.img||'')}" alt="${x(c.title)}" onerror="this.parentElement.style.display='none'">
       </div>
       <div class="cert-body">
-        <div class="cert-issuer-row">${esc(c.issuer)}</div>
-        <div class="cert-title-txt">${esc(c.title)}</div>
-        <div class="cert-desc-txt">${esc(c.desc)}</div>
-        ${c.link?`<a href="${esc(c.link)}" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>`:`<span class="cert-view-btn-none"><i class="fas fa-lock"></i> Link Not Added</span>`}
+        <div class="cert-title-txt">${x(c.title)}</div>
+        <div class="cert-desc-txt">${x(c.desc)}</div>
+        ${c.link
+          ?`<a href="${x(c.link)}" target="_blank" class="cert-link-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>`
+          :`<span class="cert-no-link"><i class="fas fa-clock"></i> Link coming soon</span>`}
       </div>
     </div>`).join('');
 }
 
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function x(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 
 function renderAll(){
   const d=getData();
   renderSkills(d);renderExp(d);renderProjects(d);renderCerts(d);
-  // re-observe new elements
   document.querySelectorAll('.rv:not(.on),.rv-l:not(.on),.rv-r:not(.on)').forEach(el=>obs.observe(el));
 }
 
-/* ═══════════════════════════════
-   NAV & UI
-═══════════════════════════════ */
+/* ── NAV ── */
 document.getElementById('yr').textContent=new Date().getFullYear();
-const nav=document.getElementById('mainNav');
-window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>30),{passive:true});
+const navEl=document.getElementById('nav');
+window.addEventListener('scroll',()=>navEl.classList.toggle('on',scrollY>20),{passive:true});
 
-const sections=document.querySelectorAll('section[id]');
-const navAs=document.querySelectorAll('.nav-links a');
+const secs=document.querySelectorAll('section[id]');
+const navAs=document.querySelectorAll('.nav-ul a');
 window.addEventListener('scroll',()=>{
   let cur='';
-  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-130)cur=s.id;});
+  secs.forEach(s=>{if(scrollY>=s.offsetTop-110)cur=s.id;});
   navAs.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active');});
 },{passive:true});
 
-const ham=document.getElementById('hamBtn'),mob=document.getElementById('mobOverlay');
-let mOpen=false;
-function openMob(){mOpen=true;mob.classList.add('open');document.body.style.overflow='hidden';ham.children[0].style.transform='rotate(45deg) translate(4px,5px)';ham.children[1].style.opacity='0';ham.children[2].style.transform='rotate(-45deg) translate(4px,-5px)';}
-function closeMob(){mOpen=false;mob.classList.remove('open');document.body.style.overflow='';ham.children[0].style.transform='';ham.children[1].style.opacity='';ham.children[2].style.transform='';}
-ham.addEventListener('click',()=>mOpen?closeMob():openMob());
+/* ── HAMBURGER ── */
+const ham=document.getElementById('ham'),mobEl=document.getElementById('mob');
+let mo=false;
+function oMob(){mo=true;mobEl.classList.add('on');document.body.style.overflow='hidden';ham.children[0].style.transform='rotate(45deg) translate(4px,5px)';ham.children[1].style.opacity='0';ham.children[2].style.transform='rotate(-45deg) translate(4px,-5px)';}
+function cMob(){mo=false;mobEl.classList.remove('on');document.body.style.overflow='';ham.children[0].style.transform='';ham.children[1].style.opacity='';ham.children[2].style.transform='';}
+ham.addEventListener('click',()=>mo?cMob():oMob());
 
+/* ── SMOOTH SCROLL ── */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     if(a.hasAttribute('download'))return;
     const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-64,behavior:'smooth'});}
+    if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-60,behavior:'smooth'});}
   });
 });
 
+/* ── REVEAL ── */
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');});
 },{threshold:0.06});
 document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>obs.observe(el));
 
+/* ── TOAST ── */
 document.getElementById('dlCV')?.addEventListener('click',()=>{
-  setTimeout(()=>{const t=document.getElementById('toast');t.textContent='Resume download started!';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);},300);
+  setTimeout(()=>{const t=document.getElementById('toast');t.textContent='Resume download started!';t.classList.add('on');setTimeout(()=>t.classList.remove('on'),3000);},300);
 });
 
-// Hide nav labels on very small screens
-function checkNav(){
-  const w=window.innerWidth;
-  document.getElementById('waLabel').style.display=w<480?'none':'';
-  document.getElementById('resumeLabel').style.display=w<380?'none':'';
-}
-window.addEventListener('resize',checkNav);checkNav();
-
-// Listen for storage changes from admin page
+/* ── LIVE SYNC FROM ADMIN ── */
 window.addEventListener('storage',e=>{if(e.key==='portfolio_data')renderAll();});
 
 renderAll();
