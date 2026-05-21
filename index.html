@@ -27,14 +27,7 @@ body {
   background: var(--white);
   color: var(--black);
   overflow-x: hidden;
-  cursor: none;
 }
-
-/* ── CUSTOM CURSOR ── */
-.cursor { position: fixed; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: width .2s, height .2s, background .2s; }
-.cursor-follower { position: fixed; width: 36px; height: 36px; border: 1.5px solid var(--black); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: transform .12s ease, width .2s, height .2s, border-color .2s; }
-.cursor.hovered { width: 16px; height: 16px; background: var(--accent2); }
-.cursor-follower.hovered { width: 54px; height: 54px; border-color: var(--accent); }
 
 /* ── LOADER ── */
 .loader {
@@ -324,7 +317,7 @@ section { padding: var(--section-pad) 48px; }
 .cert-date { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
 .cert-footer { display: flex; align-items: center; justify-content: space-between; }
 .cert-badge { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--gray-mid); font-weight: 500; }
-.cert-arrow { width: 36px; height: 36px; border-radius: 50%; background: var(--gray-light); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--black); transition: all .25s; }
+.cert-arrow { width: 36px; height: 36px; border-radius: 50%; background: var(--gray-light); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--black); transition: all .25px; }
 .cert-card:hover .cert-arrow { background: var(--accent); color: var(--black); }
 
 /* ── TESTIMONIAL / QUOTE ── */
@@ -398,7 +391,41 @@ footer {
 .nav-drawer a:hover { color: var(--accent); }
 .nav-drawer-close { position: absolute; top: 24px; right: 24px; font-size: 28px; color: var(--white); cursor: pointer; background: none; border: none; }
 
-/* ── RESPONSIVE ── */
+/* ══════════════════════════════════════════
+   RESPONSIVE — All Breakpoints
+   ══════════════════════════════════════════ */
+
+/* ── TV / Large screens (1800px+) ── */
+@media (min-width: 1800px) {
+  :root { --section-pad: 160px; }
+  nav { padding: 28px 80px; }
+  nav.scrolled { padding: 18px 80px; }
+  section { padding: var(--section-pad) 80px; }
+  #hero { padding: 0 80px; grid-template-columns: 1fr 520px; }
+  .hero-photo-wrap { width: 420px; height: 500px; }
+  .skills-grid { grid-template-columns: repeat(4, 1fr); }
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+  .contact-left, .contact-right { padding: 100px 80px; }
+  footer { padding: 48px 80px; }
+  .section-title { font-size: 72px; }
+  .hero-name { font-size: 108px; }
+  .nav-logo { font-size: 26px; }
+}
+
+/* ── Desktop (1280px – 1799px) — default, no changes needed ── */
+
+/* ── Laptop / Small Desktop (1024px – 1279px) ── */
+@media (max-width: 1279px) and (min-width: 1025px) {
+  nav { padding: 20px 36px; }
+  nav.scrolled { padding: 14px 36px; }
+  section { padding: 100px 36px; }
+  #hero { padding: 0 36px; grid-template-columns: 1fr 360px; gap: 30px; }
+  .hero-photo-wrap { width: 300px; height: 360px; }
+  .skills-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ── Tablet (768px – 1024px) ── */
 @media (max-width: 1024px) {
   #hero { grid-template-columns: 1fr; padding: 0 32px; }
   .hero-right { display: none; }
@@ -416,21 +443,76 @@ footer {
   footer { flex-direction: column; gap: 16px; text-align: center; }
   .exp-item { grid-template-columns: 1fr; gap: 16px; }
 }
+
+/* ── Large Tablet Portrait (768px – 900px) ── */
+@media (max-width: 900px) and (min-width: 601px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+  .hero-stats { gap: 28px; }
+  .exp-item { grid-template-columns: 1fr; gap: 12px; }
+  .contact-left, .contact-right { padding: 60px 40px; }
+}
+
+/* ── Mobile Large (481px – 600px) ── */
 @media (max-width: 600px) {
   nav { padding: 16px 20px; }
+  nav.scrolled { padding: 12px 20px; }
   section { padding: 60px 20px; }
-  .hero-left { padding-top: 100px; }
-  .contact-left, .contact-right { padding: 48px 24px; }
+  #quote-section { padding: 72px 20px; }
+  .hero-left { padding-top: 100px; padding-bottom: 40px; }
+  .hero-stats { gap: 20px; flex-wrap: wrap; }
+  .hero-stat-num { font-size: 28px; }
+  .hero-btns { flex-direction: column; gap: 10px; }
+  .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+  .about-cta-row { flex-direction: column; }
+  .btn-dark, .btn-border-dark { width: 100%; justify-content: center; }
+  .contact-left { padding: 48px 24px; }
+  .contact-right { padding: 48px 24px; }
   footer { padding: 32px 20px; }
-  .hero-stats { gap: 24px; }
+  .contact-link-item { padding: 14px 16px; }
+  .cli-value { display: none; }
+  .cert-card { padding: 28px 22px; }
+  .project-inner { padding: 28px 24px; }
+  .skill-card { padding: 24px 20px; }
+  .exp-timeline::before { left: 8px; }
+  .exp-item { padding-left: 32px; }
+  .exp-item::before { left: 3px; }
+}
+
+/* ── Mobile Small (max 480px) ── */
+@media (max-width: 480px) {
+  :root { --section-pad: 56px; }
+  nav { padding: 14px 16px; }
+  section { padding: 56px 16px; }
+  #hero { padding: 0 16px; }
+  #quote-section { padding: 60px 16px; }
+  .hero-name { letter-spacing: -2px; }
+  .section-title { letter-spacing: -1px; }
+  .hero-tag { font-size: 10px; }
+  .hero-desc { font-size: 14px; }
+  .skills-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+  .skill-card { padding: 20px 16px; }
+  .skill-name { font-size: 14px; }
+  .contact-left, .contact-right { padding: 40px 16px; }
+  footer { padding: 28px 16px; }
+  .footer-copy { font-size: 11px; }
+  .contact-left-title { font-size: clamp(30px, 9vw, 48px); }
+  .about-img-deco { width: 100px; height: 100px; right: -10px; bottom: -10px; }
+  .about-img-deco strong { font-size: 32px; }
+}
+
+/* ── Very small phones (max 360px) ── */
+@media (max-width: 360px) {
+  section { padding: 48px 14px; }
+  #hero { padding: 0 14px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-direction: column; gap: 16px; }
+  .hero-btns { gap: 8px; }
+  .contact-item-icon { width: 36px; height: 36px; font-size: 15px; }
 }
 </style>
 </head>
 <body>
-
-<!-- CURSOR -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursorFollower"></div>
 
 <!-- LOADER -->
 <div class="loader" id="loader">
@@ -883,22 +965,6 @@ const interval = setInterval(() => {
   loaderNum.textContent = count;
 }, 40);
 
-/* ─ CURSOR ─ */
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursorFollower');
-let mx = 0, my = 0, fx = 0, fy = 0;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; });
-function animFollower() {
-  fx += (mx - fx) * 0.1; fy += (my - fy) * 0.1;
-  follower.style.left = fx + 'px'; follower.style.top = fy + 'px';
-  requestAnimationFrame(animFollower);
-}
-animFollower();
-document.querySelectorAll('a, button, .skill-card, .cert-card, .project-card').forEach(el => {
-  el.addEventListener('mouseenter', () => { cursor.classList.add('hovered'); follower.classList.add('hovered'); });
-  el.addEventListener('mouseleave', () => { cursor.classList.remove('hovered'); follower.classList.remove('hovered'); });
-});
-
 /* ─ NAV SCROLL ─ */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
@@ -954,4 +1020,3 @@ window.addEventListener('scroll', () => {
 </script>
 </body>
 </html>
-HTMLEOF
