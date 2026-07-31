@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" fill="none"/>
+<rect x="90" y="260" width="55" height="110" rx="8" fill="#3C63FF"/>
+<rect x="163" y="200" width="55" height="170" rx="8" fill="#3C63FF"/>
+<rect x="236" y="130" width="55" height="240" rx="8" fill="#3C63FF"/>
+<rect x="309" y="50" width="55" height="320" rx="8" fill="#3C63FF"/>
+<polyline points="70,300 165,235 238,185 285,215 430,80" fill="none" stroke="#3C63FF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="430,80 405,95 416,60" fill="#3C63FF"/>
+<text x="256" y="480" text-anchor="middle" font-size="90" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" fill="#0F2060">IYS</text>
+</svg>
